@@ -18,7 +18,7 @@ function _install_ffmpeg() {
 	--enable-pthreads  --enable-libopencore-amrnb --enable-libopencore-amrwb \
 	--enable-libmp3lame --enable-libvpx --enable-libfdk-aac --enable-libfreetype \
 	--enable-libtheora --enable-libvorbis  --enable-libx264 --enable-libx265 --enable-libxvid \
-	--enable-postproc --enable-swscale --enable-avfilter --enable-runtime-cpudetect \
+	--enable-postproc --enable-swscale --enable-avfilter --enable-libass --enable-runtime-cpudetect \
 	--extra-cflags=-I/usr/local/ffmpegtoolkit/include/ --extra-ldflags=-L/usr/local/ffmpegtoolkit/lib \
 	--extra-cflags="-I/usr/local/ffmpegtoolkit/include/ -I/usr/local/cuda/include" --extra-ldflags="-L/usr/local/ffmpegtoolkit/lib -L/usr/local/cuda/lib64" \
 	--enable-version3
@@ -32,4 +32,3 @@ function _install_ffmpeg() {
 }
 
 _install_ffmpeg
-
