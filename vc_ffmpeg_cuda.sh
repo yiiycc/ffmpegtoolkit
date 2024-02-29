@@ -7,8 +7,10 @@ function _install_ffmpeg() {
 	echo -e $RED"Installation of $_package ....... started"$RESET
 	cd $SOURCE_DIR/
 	rm -vrf ffmpeg*
-	git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
-	cd ffmpeg/
+	#git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
+	wget https://github.com/FFmpeg/FFmpeg/archive/refs/tags/n4.4.2.tar.gz
+	tar -xvzf n4.4.2.tar.gz
+	cd FFmpeg-n4.4.2/
 	ldconfig
 	./configure --prefix=$INSTALL_DIR \
 	--pkg-config-flags="--static" \
