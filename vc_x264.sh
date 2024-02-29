@@ -2,7 +2,7 @@
 
 function _install_x264() {
 	clear
-	_file="last_stable_x264.tar.bz2"
+	_file="x264-snapshot-20180402-2245-stable.tar.bz2"
 	_package="x264"
 	echo -e $RED"Installation of $_package ....... started"$RESET
 
@@ -13,9 +13,9 @@ function _install_x264() {
 		echo "$_file found, Skip Downloads"
 	else
 		echo "$_file not found, Try Downloading......"
-	        wget https://download.videolan.org/x264/snapshots/$_file
+	        wget https://download.videolan.org/pub/videolan/x264/snapshots/$_file
 	fi
-	tar xvjf last_stable_x264.tar.bz2
+	tar xvjf x264-snapshot-20180402-2245-stable.tar.bz2
 	cd x264-snapshot-*-stable/
 	./configure --prefix=$INSTALL_DIR --enable-shared --enable-pic --disable-asm
 	make -j $cpu
